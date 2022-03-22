@@ -1,9 +1,9 @@
 const db = require('./content')
 const history = (userId, name, pic, url) => {
         const promise = new Promise((resolve, rejects) => {
-            const sql = "INSERT INTO user_info.history_comic(userId,name,pic,url) values (" +
+            const sql = "INSERT INTO history_comic(userId,name,pic,url) values (" +
                 userId + "," + "'" + name + "'" + ",'" + pic + "'" + ",'" + url + "'" + ")";
-            const sql1 = "select count(*) as number from user_info.history_comic where userId=" + "'" + userId + "'" + " and url=" + "'" + url + "';"
+            const sql1 = "select count(*) as number from history_comic where userId=" + "'" + userId + "'" + " and url=" + "'" + url + "';"
                 // console.log(sql1);
             let number;
             db.query(sql1, (err, results) => {
@@ -19,7 +19,7 @@ const history = (userId, name, pic, url) => {
                 if (number == "0") {
                     // console.log(sql)
                     db.query(sql, (err, results) => {
-                        console.log(sql)
+                        // console.log(sql)
                         if (err) {
                             resolve('系统错误');
                             return console.log(err.message);

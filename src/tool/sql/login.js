@@ -1,7 +1,7 @@
 const db = require('./content')
 const login = (user, pwd) => {
         const promise = new Promise((resolve, rejects) => {
-            const sql = "SELECT * FROM user_info.users where account_number=" + "'" + user + "'";
+            const sql = "SELECT * FROM users where account_number=" + "'" + user + "'";
             db.query(sql, (err, results) => {
                 if (err) {
                     resolve('账号或密码错误');

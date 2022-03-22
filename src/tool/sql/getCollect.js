@@ -1,7 +1,7 @@
 const db = require('./content')
 const getCollect = (userId) => {
         const promise = new Promise((resolve, rejects) => {
-            const sql = "SELECT * FROM user_info.collect_comic where userId=" + userId;
+            const sql = "SELECT * FROM collect_comic where userId=" + userId;
             // console.log(sql);
             db.query(sql, (err, results) => {
                 if (err) {

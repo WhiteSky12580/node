@@ -1,9 +1,9 @@
 const db = require('./content')
 const collect = (userId, name, pic, url) => {
         const promise = new Promise((resolve, rejects) => {
-            const sql = "INSERT INTO user_info.collect_comic(userId,name,pic,url) values (" +
+            const sql = "INSERT INTO collect_comic(userId,name,pic,url) values (" +
                 userId + "," + "'" + name + "'" + ",'" + pic + "'" + ",'" + url + "'" + ")";
-            const sql1 = "select count(*) as number from user_info.collect_comic where userId=" + "'" + userId + "'" + " and url=" + "'" + url + "';"
+            const sql1 = "select count(*) as number from collect_comic where userId=" + "'" + userId + "'" + " and url=" + "'" + url + "';"
                 // console.log(sql1);
             let number;
             db.query(sql1, (err, results) => {
