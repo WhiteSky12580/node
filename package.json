@@ -1,25 +1,22 @@
 {
-    "name": "node",
+    "name": "y",
     "version": "1.0.0",
     "description": "",
     "main": "app.js",
-    "bin": {
-        "node": "www.js"
-    },
     "scripts": {
-        "dev": "nodemon bin/www.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon app.js"
     },
-    "keywords": [],
     "author": "",
     "license": "ISC",
-    "devDependencies": {
-        "nodemon": "^2.0.15",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.10",
+        "express": "^4.17.3",
+        "http-proxy": "^1.18.1",
+        "mysql": "^2.18.1",
         "request": "^2.88.2"
     },
-    "dependencies": {
-        "axios": "^0.25.0",
-        "cheerio": "^1.0.0-rc.10",
-        "iconv-lite": "^0.6.3",
-        "mysql": "^2.18.1"
+    "devDependencies": {
+        "nodemon": "^2.0.15"
     }
 }
